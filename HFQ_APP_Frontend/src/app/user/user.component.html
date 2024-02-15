@@ -1,0 +1,63 @@
+<div class="header-panel">
+    <h1 class="header">Highfield Recruitment</h1>
+</div>
+<div class="header-panel">
+    <h2 class="header">
+        1. User Details <button (click)="refreshData()">Refresh</button>
+    </h2>
+</div>
+
+<br>
+<div class="user-list">
+    <div *ngFor="let user of userBOs; let i = index" class="user-card" [style.background-color]="user.FavouriteColour"
+        (mouseover)="onUserHover(i)" (mouseleave)="onUserLeave(i)">
+        <p class="user-name">{{ user.FirstName }} {{ user.LastName }}</p>
+        <p class="user-email">Email: <a>{{ user.Email }}</a></p>
+        <p class="user-DateOfBirth">Date of Birth: {{ user.Dob | date }}</p>
+        <p class="user-FavouriteColour">Favourite Colour: {{ user.FavouriteColour }}</p>
+        <!-- <p><b> User ID: </b>{{ user.agesBO.UserId }} </p>
+        <p class="user-DateOfBirth"><b> Original Age:</b> {{ user.agesBO.OriginalAge }} </p>
+        <p class="user-DateOfBirth"><b> Age Plus Twenty:</b> {{ user.agesBO.AgePlusTwenty }} </p> -->
+
+        <!-- User Popup -->
+        <div class="user-popup user-card" *ngIf="user.IsHovered" [style.background-color]="user.FavouriteColour">
+            <!-- Add content for the popup here -->
+            <h1 class="user-name">{{ user.FirstName }} {{ user.LastName }}</h1>
+            <p><b> User ID: </b>{{ user.agesBO.UserId }} </p>
+            <h3 class="user-DateOfBirth"><b> Original Age:</b> {{ user.agesBO.OriginalAge }} </h3>
+            <h3 class="user-DateOfBirth"><b> Age Plus Twenty:</b> {{ user.agesBO.AgePlusTwenty }} </h3>
+        </div>
+
+    </div>
+</div>
+
+<br>
+<div class="header-panel">
+    <h2 class="header">
+        2. Colour Details with Top Quantity <button (click)="refreshData()">Refresh</button>
+    </h2>
+</div>
+
+<br>
+<div class="user-list">
+    <div *ngFor="let col of topColoursBOs; let i = index" class="user-card" [style.background-color]="col.Colour">
+        <p><b> Quantity : </b>{{ col.Count }} </p>
+        <p><b> Name of Colour:</b> {{ col.Colour }} </p>
+    </div>
+</div>
+
+<!-- <br>
+<div class="header-panel">
+    <h2 class="header">
+        3. "UserId Profiles with Ages" <button (click)="refreshData()">Refresh</button>
+    </h2>
+</div>
+
+<br>
+<div class="user-list">
+    <div *ngFor="let ago of agesBOs; let i = index" class="user-card" [style.background-color]="">
+        <p><b> User ID: </b>{{ ago.UserId }} </p>
+        <p><b> Original Age:</b> {{ ago.OriginalAge }} </p>
+        <p><b> Age Plus Twenty:</b> {{ ago.AgePlusTwenty }} </p>
+    </div>
+</div> -->

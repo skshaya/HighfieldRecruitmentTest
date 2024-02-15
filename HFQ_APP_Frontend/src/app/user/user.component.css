@@ -1,0 +1,118 @@
+/* user.component.css */
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .user-card {
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .user-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #050505; /* Example color for user name */
+  }
+
+  .user-info {
+    margin: 5px 0;
+    font-size: 1rem; /* Example font size for user info */
+    color: #555; /* Example color for user info */
+  }
+
+  .user-email {
+    margin: 5px 0;
+    font-size: 1rem; 
+    color: #555; 
+    text-decoration: none; /* Optional: Remove default underline */
+}
+
+    .user-email a {
+        color: inherit; /* Inherit the color from the parent */
+        text-decoration: underline; /* Optional: Add underline on hover or focus */
+    }
+
+    .user-DateOfBirth {
+        margin: 10px 0; /* Adjusted margin */
+        font-size: 1fr; /* Increased font size */
+        color: #333; /* Changed text color to a darker shade */
+        border: 0cm;
+    }
+    
+
+  .user-FavouriteColour {
+    margin: 5px 0;
+    font-size: 1rem; 
+    color: #555; 
+  }
+
+  .header-panel {
+      background-color: #f0f0f0; /* Panel background color */
+      padding: 20px; /* Padding around the panel */
+      border: 1px solid #ccc; /* Border around the panel */
+      border-radius: 5px; /* Rounded corners for the panel */
+      text-align: center; /* Center the text within the panel */
+  }
+  
+  .header {
+      margin: 0; /* Remove default margin for the h1 element */
+      color: #060606; /* Header text color */
+      font-family: 'Times New Roman', Times, serif;
+  }
+  .user-card {
+    position: relative;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.user-card:hover {
+    background-color: rgb(255, 255, 255); /* Change the background color on hover */
+}
+
+.user-popup {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    width: 350px; /* Adjust the width according to your needs */
+    height: 150px;
+    padding: 2px;
+    background-color: white;
+    border: 5px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.user-card:hover .user-popup {
+    display: block;
+}
+
+
+.refresh-button {
+    margin: 10px; /* Adjust the margin as needed */
+  }
+  
+  button {
+    padding: 10px; /* Adjust the padding as needed */
+    background-color: #16a44f; /* Set the background color */
+    color: white; /* Set the text color */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Set cursor to pointer on hover */
+  }
+  
+  button:hover {
+    background-color: #011c03; /* Change background color on hover */
+  }
+  
