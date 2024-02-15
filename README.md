@@ -21,4 +21,8 @@ This project is a technical test for Highfield Recruitment. It involves developi
      - Display each color in the dataset with its frequency, ordered by highest quantity then alphabetically.<br>
      - Calculate and list all user's ages plus 20 years.
 
-![Display the color details](https://github.com/skshaya/HighfieldRecruitmentTest/blob/main/Color%20Details.png | width=100)
+## Some Sample Pictures of the UI
+
+![Display the color details](https://github.com/skshaya/HighfieldRecruitmentTest/blob/main/Color%20Details.png)
+
+![Display the User details](https://github.com/skshaya/HighfieldRecruitmentTest/blob/main/User%20Details.png)
